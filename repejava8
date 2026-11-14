@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class R3 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingrese el numero de meses: ");
+        int n = entrada.nextInt();
+
+        double saldo = 0;
+
+        for (int mes = 1; mes <= n; mes++) {
+            System.out.print("Ingrese el aporte del mes: ");
+            double aporte = entrada.nextDouble();
+
+            saldo = saldo + aporte;
+
+            double interes = saldo * 0.008;
+            saldo = saldo + interes;
+        }
+
+        System.out.println("El saldo final es: " + saldo);
+
+        entrada.close();
+    }
+}
